@@ -4,3 +4,7 @@
 /Event-Bus/node_modules
 /Query/node_modules
 /Moderation/node_modules
+/.ds_store
+/Moderation/.ds_store
+/Posts/.ds_store
+/Query/.ds_store
