@@ -26,5 +26,5 @@ app.post("/events", async (req, res) => {
 });
 
 app.listen(4003, () => {
-  console.log("Moderation service started on http://localhost:4003");
+  console.log("Listening on 4003");
 });
