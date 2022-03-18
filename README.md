@@ -13,6 +13,7 @@ Basic blog application using Docker, Kubernetes and Microservices.
 
 Add the following line to etc/hosts:
 
-`127.0.0.1 posts.com`\
+`127.0.0.1 posts.com`
+
 **Start Command(in development mode)**
 `skaffold dev`
