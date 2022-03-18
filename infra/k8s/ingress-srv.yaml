@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-srv
@@ -11,18 +11,30 @@ spec:
       http:
         paths:
           - path: /posts/create
+            pathType: Prefix
             backend:
-              serviceName: posts-clusterip-srv
-              servicePort: 4000
+              service:
+                name: posts-clusterip-srv
+                port:
+                  number: 4000
           - path: /posts
+            pathType: Prefix
             backend:
-              serviceName: query-srv
-              servicePort: 4002
+              service:
+                name: query-srv
+                port:
+                  number: 4002
           - path: /posts/?(.*)/comments
+            pathType: Prefix
             backend:
-              serviceName: comments-srv
-              servicePort: 4001
+              service:
+                name: comments-srv
+                port:
+                  number: 4001
           - path: /?(.*)
+            pathType: Prefix
             backend:
-              serviceName: client-srv
-              servicePort: 3000
+              service:
+                name: client-srv
+                port:
+                  number: 3000

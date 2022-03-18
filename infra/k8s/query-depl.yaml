@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: cygnetops/query-84
+          image: ballihardalli/query
 ---
 apiVersion: v1
 kind: Service

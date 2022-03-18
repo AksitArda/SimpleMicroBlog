@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: cygnetops/moderation-84
+          image: ballihardalli/moderation
 ---
 apiVersion: v1
 kind: Service
